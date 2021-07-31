@@ -1,19 +1,19 @@
 import React from "react"
 import { View, Text, Image,StyleSheet } from "react-native"
-import dog from "../assets/golden.jpg"
 import { EvilIcons } from '@expo/vector-icons';
 
-export default function PetsCard(){
+export default function PetsCard(props){
+    console.log(props)
     return(
         <View style={styles.cardContainer}>
-            <Image style={styles.image} source={dog}/>
+            <Image style={styles.image} source={props.image}/>
             <View style={styles.details}>
-                <Text style={styles.title}>Name</Text>
-                <Text style={styles.detailText}>Dogo</Text>
-                <Text style={styles.detailText}>3 years old</Text>
+                <Text style={styles.title}>{props.name}</Text>
+                <Text style={styles.detailText}>{props.type}</Text>
+                <Text style={styles.detailText}>{props.age}</Text>
                 <View style={styles.location}>
                     <EvilIcons style="icon" name="location" size={24} color="#D3D3D3" />
-                    <Text numberOfLines={1} style={[styles.detailText, styles.locationText]}>No. 4 Lower Hill drive</Text>
+                    <Text numberOfLines={1} style={[styles.detailText, styles.locationText]}>{props.location}</Text>
                 </View>  
             </View>
         </View>
@@ -28,7 +28,7 @@ const styles=StyleSheet.create({
         flex:0.6,
         zIndex:100,
         position:"absolute",
-        top:-15,
+        top:-10,
         bottom:15,
         right:100,
         left:0,
@@ -39,7 +39,7 @@ const styles=StyleSheet.create({
         backgroundColor:"#fff", 
         justifyContent:"flex-end" ,
         borderRadius:13,
-        marginVertical:30,   
+        marginVertical:25,   
     },
     title:{
         color:"#4d4dff",
@@ -61,8 +61,8 @@ const styles=StyleSheet.create({
         justifyContent:"center",
         alignItems:"center",
         marginLeft:-8,
-        marginBottom:28,
-        marginTop:15,
+        marginBottom:20,
+        marginTop:5,
         flex:1,
     },
     detailText:{

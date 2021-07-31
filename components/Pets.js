@@ -1,9 +1,18 @@
 import React from "react"
-import { StyleSheet, TextInput, View } from "react-native"
+import { FlatList, StyleSheet, TextInput, View } from "react-native"
 import { AntDesign } from '@expo/vector-icons';
 import PetsCard from "./PetsCard"
+import dog from "../assets/golden.jpg"
+import dog2 from "../assets/unnamed.jpg"
 
 export default function Pets(){
+
+    const pets=[
+        {image:`${dog}`, name:"Tucker", type:"dog", age:"3 years old", location:"No. 4 Lower Hill drive"},
+        {image:`${dog2}`, name:"Buddy", type:"dog", age:"5 years old", location:"No. 4 Lower Hill drive"},  
+    ]
+
+
     return(
         <View style={styles.container}>
             <View style={styles.searchContainer}>
@@ -13,8 +22,15 @@ export default function Pets(){
                 placeholder="Search here"
             />
             </View>
+            <FlatList
+                data={pets}
+                renderItem={({item})=>{
+                    return<PetsCard image={item.image} name={item.name} type={item.name} age={item.age} location={item.location} />
+                }}
+                keyExtractor={(item)=>{item.name}}
+            />
            
-            <PetsCard/>
+            {/* <PetsCard/> */}
         </View>
     )
 }
