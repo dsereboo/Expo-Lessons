@@ -1,6 +1,7 @@
 import React from "react"
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 import logo from "../assets/wfh.png"
+import CircleButton from "./CircleButton"
 
 
 const WorkFromHome =()=>{
@@ -19,9 +20,10 @@ const WorkFromHome =()=>{
             </Text>
           </View>
         </View>
-        <TouchableOpacity style={styles.button}>
+        {/* <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Start</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
+        <CircleButton/>
       </View>
     );
 }
