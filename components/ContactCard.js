@@ -8,7 +8,7 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 
 export default function ContactCard(props){
 
-    console.log(props)
+    
     return(
         <View style={styles.container}>
             <Image source={image} style={styles.image}/>
