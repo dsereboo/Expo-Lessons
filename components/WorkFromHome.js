@@ -20,10 +20,10 @@ const WorkFromHome =()=>{
             </Text>
           </View>
         </View>
-        {/* <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Start</Text>
-        </TouchableOpacity> */}
-        <CircleButton/>
+        </TouchableOpacity>
+        {/* <CircleButton/> */}
       </View>
     );
 }
