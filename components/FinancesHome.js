@@ -37,14 +37,10 @@ export default function  FinancesHome(){
                 <Text style={styles.balance}>$5435.40</Text>
             </View>
 
-            <View style={styles.actionsContainer}>
-
-            </View>
-
-            {/* <View style={styles.titleContainer}>
+            <View style={styles.titleContainer}>
                 <Text style={[styles.name, styles.transactionTitle]}>Last Transaction</Text>
                 <Text style={[styles.balanceTitle, styles.more]}>See all</Text>
-            </View> */}
+            </View>
 
             <FlatList
                 data={data}
@@ -73,18 +69,15 @@ const styles=StyleSheet.create({
         flex:2.3,
         backgroundColor:"#F8F8F8",
         borderRadius:15,
-        marginVertical:10,
+        marginVertical:20,
         paddingLeft:20,
         justifyContent:"center",
         alignItems:"flex-start",
+        padding:15,
         
     },
     detailsContainer:{
         flex:5
-    },
-    actionsContainer:{
-        flexDirection:"row",
-
     },
     costContainer:{
        flex:1,
@@ -92,7 +85,9 @@ const styles=StyleSheet.create({
     titleContainer:{
         flex:0.7,
         flexDirection:"row",
-        alignItems:"center"
+        alignItems:"center",
+        padding:5,
+        marginBottom:10,
     },
     image:{
         flex:1.7,
@@ -120,12 +115,10 @@ const styles=StyleSheet.create({
     },
     transactionTitle:{
         fontSize:20,
-        flex:0.8
+        flex:0.85,
     },
     more:{
-        // justifyContent:"flex-end",
-        // alignItems:"flex-end",
-        flex:0.2,
+        flex:0.15,
         fontSize:14,
     }
 })

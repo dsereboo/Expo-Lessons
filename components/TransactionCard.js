@@ -23,7 +23,7 @@ const styles=StyleSheet.create({
         flex:10,
         flexDirection:"row", 
         alignItems:"center",
-        marginBottom:10,
+        marginBottom:15,
       
     },
     costContainer:{
