@@ -1,18 +1,22 @@
 import React from "react"
-import { Image, StyleSheet, View,Text, TouchableOpacity } from "react-native"
+import { Image, StyleSheet, View,Text, TouchableOpacity, FlatList } from "react-native"
 import TransactionCard from "./TransactionCard"
 import { Ionicons } from '@expo/vector-icons';
 import image from "../assets/image.jpg"
 import BottomNav from "./BottomNav";
+import paypal from "../assets/paypal.png"
+import youtube from "../assets/black.jpg"
+import twitch from "../assets/download.png"
+import spotify from "../assets/spotify.jpg"
 
 export default function  FinancesHome(){
 
     const data=[
-        {logo:"", title:"", date:"", cost:"",},
-        {logo:"", title:"", date:"", cost:"",},
-        {logo:"", title:"", date:"", cost:"",},
-        {logo:"", title:"", date:"", cost:"",},
-        {logo:"", title:"", date:"", cost:"",},
+        {logo:`${paypal}`, title:"Paypal", date:"10 March", cost:"-$5.99",},
+        {logo:`${youtube}`, title:"Youtube", date:"12 April", cost:"-$35.00",},
+        {logo:`${paypal}`, title:"Paypal", date:"15 June", cost:"-$2.99",},
+        {logo:`${twitch}`, title:"Twitch", date:"20 September", cost:"-$4.99",},
+        {logo:`${spotify}`, title:"Spotify", date:"1 December", cost:"-$5.00",},
     ]
     return (
         <View style={styles.container}>
@@ -37,13 +41,18 @@ export default function  FinancesHome(){
 
             </View>
 
-            <View style={styles.titleContainer}>
+            {/* <View style={styles.titleContainer}>
                 <Text style={[styles.name, styles.transactionTitle]}>Last Transaction</Text>
                 <Text style={[styles.balanceTitle, styles.more]}>See all</Text>
-            </View>
+            </View> */}
 
-            <TransactionCard />
-
+            <FlatList
+                data={data}
+                renderItem={({item})=>{
+                    return <TransactionCard data={item}/>
+                }}
+                keyExtractor={(item)=>{item.date}}
+            />
             <BottomNav/>
         </View>
     );
@@ -114,9 +123,9 @@ const styles=StyleSheet.create({
         flex:0.8
     },
     more:{
-        justifyContent:"flex-end",
-        alignItems:"flex-end",
+        // justifyContent:"flex-end",
+        // alignItems:"flex-end",
         flex:0.2,
-        fontSize:16,
+        fontSize:14,
     }
 })

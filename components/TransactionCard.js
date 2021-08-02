@@ -2,16 +2,16 @@ import React from "react"
 import { Image, StyleSheet,Text,View } from "react-native"
 import image from "../assets/paypal.png"
 
-export default function TransactionCard (){
+export default function TransactionCard (props){
     return(
         <View style={styles.container}>
-            <Image style={styles.image} source={image}/>  
+            <Image style={styles.image} source={props.data.logo}/>  
             <View style={styles.detailsContainer}>
-                <Text style={styles.title}>Paypal</Text>
-                <Text style={styles.date}>10 March</Text>
+                <Text style={styles.title}>{props.data.title}</Text>
+                <Text style={styles.date}>{props.data.date}</Text>
             </View> 
             <View style={styles.costContainer}>
-                <Text style={styles.cost}>-$5.99</Text>
+                <Text style={styles.cost} numberOfLines={1}>{props.data.cost}</Text>
             </View>
                
         </View>
@@ -23,6 +23,7 @@ const styles=StyleSheet.create({
         flex:10,
         flexDirection:"row", 
         alignItems:"center",
+        marginBottom:10,
       
     },
     costContainer:{
@@ -36,8 +37,8 @@ const styles=StyleSheet.create({
     image:{
         flex:1.5,
         width:70,
-        height:70,
-        borderRadius:10, 
+        height:60,
+        borderRadius:15, 
         marginRight:20,
     },
     title:{
