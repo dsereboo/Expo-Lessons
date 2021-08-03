@@ -1,10 +1,9 @@
 import React from 'react';
-import ContactList from './components/ContactList';
-import FinancesHome from './components/FinancesHome';
+import WalletHome from './components/WalletHome';
 import WorkFromHome from './components/WorkFromHome';
 
 export default function App() {
   return(
-    <FinancesHome/>
+    <WalletHome/>
   )
 }
