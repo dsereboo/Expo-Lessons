@@ -4,6 +4,7 @@ import { Entypo } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import ActionCard from "./ActionCard";
 
 export default function WalletHome (){
     return (
@@ -40,29 +41,9 @@ export default function WalletHome (){
                 <FontAwesome name="bell-o" size={22} color="#303030" />
                 <Text style={styles.date}>August 3,2021</Text>
             </View>
-            <View style={styles.card}>
-                <View style={styles.iconBackground}>
-                    <AntDesign name="arrowup" size={24} color="black" />
-                </View>
-                <View>
-                    <Text style={styles.cardTitle}>Sent</Text>
-                    <Text style={styles.subText}>Sending payments to clients</Text>
-                </View>
-                <Text style={styles.cardTitle}>$150</Text>
-            </View>
-            <View style={styles.card}>
-                <View style={styles.iconBackground}>
-                    <AntDesign name="arrowup" size={24} color="black" />
-                </View>
-                <View>
-                    <Text style={styles.cardTitle}>Sent</Text>
-                    <Text style={styles.subText}>Sending payments to clients</Text>
-                </View>
-                <Text style={styles.cardTitle}>$150</Text>
-            </View>
-            
-            
-            
+            <ActionCard/>
+            <ActionCard/>
+            <ActionCard/>
         </View>
     );
 }
@@ -97,15 +78,9 @@ const styles=StyleSheet.create({
         alignItems:"center",
         marginBottom:10,
     },
-    iconOptions:{
-       
-    },
-    iconDrawer:{
-        
-    },
     image:{
-        width:100,
-        height:100,
+        width:80,
+        height:80,
         borderRadius:50,
     },
     imageContainer:{
@@ -120,6 +95,7 @@ const styles=StyleSheet.create({
     },
     position:{
         fontSize:14,
+        color:"#A8A8A8"
     },
     moneyContainer:{
         flexDirection:"row",
@@ -142,6 +118,7 @@ const styles=StyleSheet.create({
     },
     label:{
         textAlign:"center",
+        color:"#A8A8A8",
         
     },
     overviewLabel:{
@@ -161,37 +138,6 @@ const styles=StyleSheet.create({
         color:"#3B4990",
         fontWeight:"bold",
     },
-    card:{
-        flexDirection:"row",
-        backgroundColor:"#fff",
-        marginHorizontal:20,
-        marginVertical:10,
-        borderRadius:15,
-        padding:15,
-        shadowColor: "#000",
-        shadowOffset: {
-          width: 100,
-          height: 100,
-        },
-        shadowOpacity: 0.2,
-        shadowRadius: 100,
-        justifyContent:"flex-start",
-        alignItems:"center"
-    },
-    iconBackground:{
-        flex:0.5,
-        backgroundColor:"#e1ecf5",
-        padding:12,
-        borderRadius:12,
-        marginRight:10,
-       
-    },
-    cardTitle:{
-        fontWeight:"bold",
-        fontSize:16,
-    },
-    subText:{
-        color:"#A8A8A8"
-    },
+
 
 })
