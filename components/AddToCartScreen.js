@@ -47,7 +47,6 @@ const styles=StyleSheet.create({
         flex:1.5,
         justifyContent:"center",
         alignItems:"center"
-     
     },
     imageContainer:{
         flex:3,

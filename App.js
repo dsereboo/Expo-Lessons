@@ -1,10 +1,11 @@
 import React from 'react';
 import AddToCartScreen from './components/AddToCartScreen';
-import WorkFromHome from "./components/WorkFromHome"
+import OnlineShoppingScreen from "./components/OnlineShoppingScreen"
+import PaymentSuccesfullScreen from './components/PaymentSuccesfullScreen';
 
 export default function App() {
   return(
-    <AddToCartScreen/>
+    <PaymentSuccesfullScreen/>
   )
 }
 

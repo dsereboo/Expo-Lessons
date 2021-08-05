@@ -1,11 +1,11 @@
 import React from "react"
 import { Image, StyleSheet, Text,TouchableOpacity,View } from "react-native"
 
-export default function AddToCartScreen(){
+export default function PaymentSuccesfullScreen(){
     return (
       <View style={styles.container}>
         <View style={styles.titleContainer}>
-          <Text style={styles.header}>ADD TO CART</Text>
+          <Text style={styles.header}>PAYMENT SUCCESSFUL</Text>
         </View>
         <View style={styles.subtextContainer}>
           <Text style={styles.subtext}>
@@ -15,11 +15,11 @@ export default function AddToCartScreen(){
           </Text>
         </View>
         <View style={styles.imageContainer}>
-          <Image style={styles.image} source={require("../assets/cart.png")} />
+          <Image style={styles.image} source={require("../assets/payment.png")} />
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Next</Text>
+            <Text style={styles.buttonText}>Get Started</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.indicator}>
@@ -47,7 +47,6 @@ const styles=StyleSheet.create({
         flex:1.5,
         justifyContent:"center",
         alignItems:"center"
-     
     },
     imageContainer:{
         flex:3,

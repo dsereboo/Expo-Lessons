@@ -1,15 +1,18 @@
 import React from "react"
 import { StyleSheet, Text, View,TouchableOpacity } from "react-native"
-import {createStackNavigator ,createAppContainer} from "react-navigation";
 
 export default function WalletSignIn(props){
     return(
         <View style={styles.container}>
             <TouchableOpacity style={styles.button}
-                onPress={()=>props.navigation.navigate('WalletHome')}
+                onPress={()=>props.navigation.navigate('Dashboard')}
             >
                 <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>
+            <View>
+                <Text>Sign Up</Text>
+                <Text>Forgot Password?</Text>
+            </View>
         </View>
     )
 }
