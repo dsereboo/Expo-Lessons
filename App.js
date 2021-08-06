@@ -5,7 +5,7 @@ import PaymentSuccesfullScreen from './components/PaymentSuccesfullScreen';
 
 export default function App() {
   return(
-    <PaymentSuccesfullScreen/>
+    <AddToCartScreen/>
   )
 }
 

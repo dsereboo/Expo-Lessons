@@ -1,5 +1,6 @@
 import React from "react"
 import { Image, StyleSheet, Text,TouchableOpacity,View } from "react-native"
+import Inidactor from "./Indicator"
 
 export default function OnlineShoppingScreen(){
     return (
@@ -23,9 +24,10 @@ export default function OnlineShoppingScreen(){
           </TouchableOpacity>
         </View>
         <View style={styles.indicator}>
-          <Text style={styles.iconText}>Previous</Text>
-          <Text>Indicator row</Text>
-          <Text style={styles.iconText}>Skip</Text>
+                <Inidactor/>
+            <View style={styles.skip}>
+                <Text style={styles.end}>Skip</Text>
+            </View>
         </View>
       </View>
     );
@@ -67,10 +69,11 @@ const styles=StyleSheet.create({
         alignItems:"center"
     },
     indicator:{
-        flex:1,
+        flex:1.5,
+        justifyContent:"center",
         alignItems:"center",
         flexDirection:"row",
-        justifyContent:"space-between"
+       
     },
     header:{
        fontSize:26,
@@ -92,9 +95,21 @@ const styles=StyleSheet.create({
         color:"#fff"
     },
     iconText:{
+        flex:0.6,
         color:"#C8C8C8",
         fontSize:16,
       
+    },
+    // end:{
+    //     flex:0.2,
+    //     justifyContent:"flex-start"
+    // },
+    skip:{
+        flex:0.1,
+        justifyContent:"flex-end"
+    },
+    icon:{
+        flex:0.2
     }
     
 })

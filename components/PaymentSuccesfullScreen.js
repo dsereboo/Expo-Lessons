@@ -1,5 +1,6 @@
 import React from "react"
 import { Image, StyleSheet, Text,TouchableOpacity,View } from "react-native"
+import Inidactor from "./Indicator"
 
 export default function PaymentSuccesfullScreen(){
     return (
@@ -23,9 +24,8 @@ export default function PaymentSuccesfullScreen(){
           </TouchableOpacity>
         </View>
         <View style={styles.indicator}>
-          <Text style={styles.iconText}>Previous</Text>
-          <Text>Indicator row</Text>
-          <Text style={styles.iconText}>Skip</Text>
+         <View style={styles.slider}>
+         </View>
         </View>
       </View>
     );
@@ -70,7 +70,6 @@ const styles=StyleSheet.create({
         flex:1,
         alignItems:"center",
         flexDirection:"row",
-        justifyContent:"space-between"
     },
     header:{
        fontSize:26,
@@ -92,9 +91,15 @@ const styles=StyleSheet.create({
         color:"#fff"
     },
     iconText:{
+        flex:0.4,
         color:"#C8C8C8",
         fontSize:16,
+        
       
+    },
+    slider:{
+        flex:0.35,
     }
+    
     
 })

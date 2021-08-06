@@ -1,5 +1,6 @@
 import React from "react"
 import { Image, StyleSheet, Text,TouchableOpacity,View } from "react-native"
+import Inidactor from "./Indicator";
 
 export default function AddToCartScreen(){
     return (
@@ -23,9 +24,13 @@ export default function AddToCartScreen(){
           </TouchableOpacity>
         </View>
         <View style={styles.indicator}>
-          <Text style={styles.iconText}>Previous</Text>
-          <Text>Indicator row</Text>
-          <Text style={styles.iconText}>Skip</Text>
+          <View style={styles.previous}>
+            <Text style={styles.iconText}>Previous</Text>
+          </View>
+          <Inidactor />
+          <View style={styles.end}>
+            <Text style={[styles.iconText, styles.skip]}>Skip</Text>
+          </View>
         </View>
       </View>
     );
@@ -95,6 +100,15 @@ const styles=StyleSheet.create({
         color:"#C8C8C8",
         fontSize:16,
       
+    },
+    skip:{
+        alignSelf:"center"
+    },
+    previous:{
+        flex:0.2
+    },
+    end:{
+        flex:0.2,
     }
     
 })
