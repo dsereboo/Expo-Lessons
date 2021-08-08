@@ -27,7 +27,11 @@ export default function AddToCartScreen(){
           <View style={styles.previous}>
             <Text style={styles.iconText}>Previous</Text>
           </View>
-          <Inidactor />
+          <View style={styles.indicatorContainer}>
+            <View style={styles.section1}></View>
+            <View style={styles.section3}></View>
+            <View style={styles.section2}></View>
+          </View>
           <View style={styles.end}>
             <Text style={[styles.iconText, styles.skip]}>Skip</Text>
           </View>
@@ -109,6 +113,29 @@ const styles=StyleSheet.create({
     },
     end:{
         flex:0.2,
-    }
+    },
+    indicatorContainer:{
+      flex:0.4,
+      flexDirection:"row",
+      justifyContent:"center",    
+  },
+  section1:{
+      backgroundColor:"#A8A8A8",
+      borderRadius:50,
+      padding:5,
+      marginRight:2,
+  },
+  section2:{
+      backgroundColor:"#A8A8A8",
+      borderRadius:20,
+      padding:5,
+      marginLeft:2,
+  },
+  section3:{
+      backgroundColor:"#5D3FD3",
+      borderRadius:20,
+      padding:5,
+
+  }
     
 })

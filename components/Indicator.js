@@ -13,24 +13,26 @@ export default function Inidactor(){
 
 const styles=StyleSheet.create({
     container:{
-        flex:0.3, 
+        flex:0.4,
         flexDirection:"row",
-        justifyContent:"space-between"    
+        justifyContent:"center"    
     },
     section1:{
-        flex:0.2,
         backgroundColor:"#A8A8A8",
         borderRadius:50,
+        padding:5,
+        marginRight:2,
     },
     section2:{
-        flex:0.2,
         backgroundColor:"#A8A8A8",
-        borderRadius:50
+        borderRadius:20,
+        padding:5,
+        marginLeft:2,
     },
     section3:{
-        flex:0.4,
         backgroundColor:"#5D3FD3",
-        borderRadius:50
-
+        borderRadius:20,
+        padding:5,
+  
     }
 })

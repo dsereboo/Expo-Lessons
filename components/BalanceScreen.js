@@ -5,38 +5,52 @@ import { Feather } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function BalaanceScreen(){
-    return(
-        <View style={styles.container}>
-            <View style={styles.balance}>
-                <View style={styles.header}>
-                    <Ionicons name="chevron-back" size={30} color="#fff" />
-                    <Feather name="bell" size={24} color="#bf80ff" />
-                </View>
-                <View style={styles.details}>
-                    <Text style={styles.title}>Your Balance</Text>
-                    <Text style={styles.amount}>$547,000.00</Text>
-                </View>
-                <View style={styles.cardRow}>
-                    <View style={styles.expense}>
-                        <View>
-                            <FontAwesome5 name="money-bill-wave" size={24} color="black" />
-                        </View>
-                        <View><Text>$5000</Text></View>
-                        <View><Text>Expense</Text></View>
-                    </View> 
-                    <View style={styles.goals}>
-                    <View>
-                            <FontAwesome5 name="money-bill-wave" size={24} color="black" />
-                        </View>
-                        <View><Text>$5000</Text></View>
-                        <View><Text>Expense</Text></View>
-                    </View>
+    return (
+      <View style={styles.container}>
+        <View style={styles.balance}>
+          <View style={styles.header}>
+            <Ionicons name="chevron-back" size={30} color="#fff" />
+            <Feather name="bell" size={24} color="#9999ff" />
+          </View>
+          <View style={styles.details}>
+            <Text style={styles.title}>Your Balance</Text>
+            <Text style={styles.amount}>$547,000.00</Text>
+          </View>
+          <View style={styles.cardRow}>
+            <View style={styles.expense}>
+              <View>
+                <FontAwesome5 name="money-bill-wave" size={24} color="black" />
+              </View>
+              <View>
+                <Text style={styles.expenseCardFigure}>$5000</Text>
+              </View>
+              <View>
+                <Text style={styles.expenseCardTitle}>Expense</Text>
+              </View>
+            </View>
+            <View style={styles.goals}>
+              <View>
+                <FontAwesome5 name="money-bill-wave" size={24} color="black" />
+              </View>
+              <View>
+                <Text>$15,000</Text>
+              </View>
+              <View>
+                <Text>Spend to Goals</Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View style={styles.transactions}>
+            <View style={styles.transactionHeader}>
+                <Text style={styles.expenseCardFigure}>Transactions</Text>
+                <View style={styles.coloredBackground}>
+                    <Text>See All</Text>
                 </View>
             </View>
-            <View style={styles.transactions}></View>
-
         </View>
-    )
+      </View>
+    );
 }
 
 const styles= StyleSheet.create({
@@ -47,12 +61,11 @@ const styles= StyleSheet.create({
     },
     balance:{
         flex:5,
-        backgroundColor:"#4d4dff",
-        
+        backgroundColor:"#4d4dff",    
     },
     transactions:{
         flex:4,
-        
+       
     },
     header:{
         flex:1.8,
@@ -76,8 +89,8 @@ const styles= StyleSheet.create({
         marginVertical:30,
     },
     title:{
-        fontSize:24,
-        color:"#bf80ff"
+        fontSize:22,
+        color:"#9999ff"
     },
     amount:{
         fontSize:32,
@@ -88,7 +101,7 @@ const styles= StyleSheet.create({
         backgroundColor:"#89CFF0",
         borderRadius:10,
         justifyContent:"center",
-        alignItems:"center"
+        alignItems:"flex-start",
     },
     goals:{
         flex:0.4,
@@ -96,5 +109,22 @@ const styles= StyleSheet.create({
         borderRadius:10,
         justifyContent:"center",
         alignItems:"center"
+    },
+    expenseCardTitle:{
+        color:"#72A0C1",
+    },
+    expenseCardFigure:{
+        fontSize:24,
+        color:"#000"
+    },
+    transactionHeader:{
+        flexDirection:"row",
+        justifyContent:"space-between",
+        alignItems:"center",
+        marginHorizontal:20,
+    },
+    coloredBackground:{
+       
+       
     }
 })

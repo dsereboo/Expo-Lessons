@@ -6,7 +6,7 @@ import PaymentSuccesfullScreen from './components/PaymentSuccesfullScreen';
 
 export default function App() {
   return(
-    <BalaanceScreen/>
+    <AddToCartScreen/>
   )
 }
 
