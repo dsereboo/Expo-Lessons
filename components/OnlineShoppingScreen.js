@@ -16,7 +16,10 @@ export default function OnlineShoppingScreen(){
           </Text>
         </View>
         <View style={styles.imageContainer}>
-          <Image style={styles.image} source={require("../assets/online.png")} />
+          <Image
+            style={styles.image}
+            source={require("../assets/online.png")}
+          />
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button}>
@@ -24,10 +27,14 @@ export default function OnlineShoppingScreen(){
           </TouchableOpacity>
         </View>
         <View style={styles.indicator}>
-                <Inidactor/>
-            <View style={styles.skip}>
-                <Text style={styles.end}>Skip</Text>
-            </View>
+          <View style={styles.indicatorContainer}>
+            <View style={styles.section1}></View>
+            <View style={styles.section3}></View>
+            <View style={styles.section2}></View>
+          </View>
+          <View style={styles.skip}>
+            <Text style={styles.iconText}>Skip</Text>
+          </View>
         </View>
       </View>
     );
@@ -70,10 +77,13 @@ const styles=StyleSheet.create({
     },
     indicator:{
         flex:1.5,
-        justifyContent:"center",
         alignItems:"center",
         flexDirection:"row",
-       
+    },
+    iconText:{
+        color:"#C8C8C8",
+        fontSize:16,
+      
     },
     header:{
        fontSize:26,
@@ -95,21 +105,40 @@ const styles=StyleSheet.create({
         color:"#fff"
     },
     iconText:{
-        flex:0.6,
         color:"#C8C8C8",
-        fontSize:16,
-      
+        fontSize:16,  
     },
-    // end:{
-    //     flex:0.2,
-    //     justifyContent:"flex-start"
-    // },
     skip:{
-        flex:0.1,
-        justifyContent:"flex-end"
+        flex:0.5,
+        justifyContent:"flex-end",
+        alignItems:"flex-end"
     },
     icon:{
         flex:0.2
+    },
+    indicatorContainer:{
+        flex:0.5,
+        flexDirection:"row",
+        justifyContent:"flex-end",  
+        alignItems:"flex-end"  
+    },
+    section1:{
+        backgroundColor:"#A8A8A8",
+        borderRadius:50,
+        padding:5,
+        marginRight:2,
+    },
+    section2:{
+        backgroundColor:"#A8A8A8",
+        borderRadius:20,
+        padding:5,
+        marginLeft:2,
+    },
+    section3:{
+        backgroundColor:"#5D3FD3",
+        borderRadius:20,
+        padding:5,
+  
     }
     
 })
