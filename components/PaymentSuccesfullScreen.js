@@ -24,10 +24,16 @@ export default function PaymentSuccesfullScreen(){
           </TouchableOpacity>
         </View>
         <View style={styles.indicator}>
-         <View style={styles.slider}>
-         </View>
+          <View style={styles.previous}>
+            <Text style={styles.iconText}>Previous</Text>
+          </View>
+          <View style={styles.indicatorContainer}>
+            <View style={styles.section1}></View>
+            <View style={styles.section3}></View>
+            <View style={styles.section2}></View>
+          </View>
         </View>
-      </View>
+        </View>
     );
 }
 
@@ -67,9 +73,11 @@ const styles=StyleSheet.create({
         alignItems:"center"
     },
     indicator:{
-        flex:1,
-        alignItems:"center",
-        flexDirection:"row",
+      flex:1,
+      flexDirection:"row",
+      alignItems:"center",
+      justifyContent:"flex-start"
+    
     },
     header:{
        fontSize:26,
@@ -91,7 +99,6 @@ const styles=StyleSheet.create({
         color:"#fff"
     },
     iconText:{
-        flex:0.4,
         color:"#C8C8C8",
         fontSize:16,
         
@@ -99,7 +106,37 @@ const styles=StyleSheet.create({
     },
     slider:{
         flex:0.35,
-    }
+    },
+    indicatorContainer:{
+      flex:0.6,
+      flexDirection:"row",
+      justifyContent:"flex-start"
+      
+  },
+  previous:{
+    flex:0.5,
+    justifyContent:"flex-start",
+    alignItems:"flex-start"
+},
+  section1:{
+      backgroundColor:"#A8A8A8",
+      borderRadius:50,
+      padding:5,
+      marginRight:2,
+  },
+  section2:{
+      backgroundColor:"#A8A8A8",
+      borderRadius:50,
+      padding:5,
+      marginLeft:2,
+  },
+  section3:{
+      backgroundColor:"#5D3FD3",
+      borderRadius:50,
+      padding:5,
+
+  }
+    
     
     
 })
