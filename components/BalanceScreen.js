@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native"
 import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import TransactionClass from "./TransactionClass";
 
 export default function BalaanceScreen(){
     return (
@@ -48,9 +49,7 @@ export default function BalaanceScreen(){
                     <Text>See All</Text>
                 </View>
             </View>
-        </View>
-        <View>
-          
+            <TransactionClass/>
         </View>
       </View>
     );
@@ -130,7 +129,8 @@ const styles= StyleSheet.create({
         flexDirection:"row",
         justifyContent:"space-between",
         alignItems:"center",
-        marginHorizontal:20,
+        marginHorizontal:30,
+        marginTop:20,
     },
     coloredBackground:{
        
