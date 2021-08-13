@@ -49,6 +49,9 @@ export default function BalaanceScreen(){
                 </View>
             </View>
         </View>
+        <View>
+          
+        </View>
       </View>
     );
 }
@@ -57,14 +60,17 @@ const styles= StyleSheet.create({
     container:{
         flex:10,
         justifyContent:"center",
-        alignItems:"stretch"
     },
     balance:{
-        flex:5,
+        flex:4.5,
         backgroundColor:"#4d4dff",    
     },
     transactions:{
         flex:4,
+        marginTop:-30,
+        backgroundColor:"#fff",
+        borderTopLeftRadius:30,
+        borderTopRightRadius:30,
        
     },
     header:{
@@ -87,6 +93,8 @@ const styles= StyleSheet.create({
         flexDirection:"row",
         justifyContent:"space-evenly",
         marginVertical:30,
+        marginBottom:50,
+        
     },
     title:{
         fontSize:22,
@@ -115,7 +123,8 @@ const styles= StyleSheet.create({
     },
     expenseCardFigure:{
         fontSize:24,
-        color:"#000"
+        color:"#000",
+        fontWeight:"bold"
     },
     transactionHeader:{
         flexDirection:"row",
