@@ -25,18 +25,20 @@ const styles=StyleSheet.create({
         flexDirection:"row",
         marginHorizontal:30,
         alignItems:"center",
-        justifyContent:"space-between"
+        justifyContent:"space-between",
+        marginVertical:10,
         
     },
     logoContainer:{
         backgroundColor:"#00b33c",
-        padding:15,
+        padding:12,
         borderRadius:50,
         marginRight:10,
     },
     header:{
         fontSize:16,
-        fontWeight:"bold"
+        fontWeight:"bold",
+       
     },
     label:{
         color:"#A8A8A8",

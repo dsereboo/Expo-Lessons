@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, Text, View } from "react-native"
+import { ScrollView, StyleSheet, Text, View } from "react-native"
 import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -43,13 +43,20 @@ export default function BalaanceScreen(){
           </View>
         </View>
         <View style={styles.transactions}>
-            <View style={styles.transactionHeader}>
-                <Text style={styles.expenseCardFigure}>Transactions</Text>
-                <View style={styles.coloredBackground}>
-                    <Text>See All</Text>
-                </View>
+          <View style={styles.transactionHeader}>
+            <Text style={styles.expenseCardFigure}>Transactions</Text>
+            <View style={styles.coloredBackground}>
+              <Text style={styles.allTransactions}>See All</Text>
             </View>
+          </View>
+          <ScrollView>
+            <TransactionClass />
+            <TransactionClass />
+            <TransactionClass />
+            <TransactionClass />
+            <TransactionClass />
             <TransactionClass/>
+          </ScrollView>
         </View>
       </View>
     );
@@ -77,7 +84,7 @@ const styles= StyleSheet.create({
         flexDirection:"row",
         justifyContent:"space-between",
         alignItems:"center",
-        // marginTop:40,
+        marginTop:10,
         marginHorizontal:20,
     },
     details:{
@@ -131,9 +138,18 @@ const styles= StyleSheet.create({
         alignItems:"center",
         marginHorizontal:30,
         marginTop:20,
+        marginBottom:10,
     },
     coloredBackground:{
-       
-       
+      backgroundColor:"#F0F8FF",
+      borderRadius:8,
+      padding:7,
+      width:80,
+      alignItems:"center"
+    },
+    allTransactions:{
+      color:"#00308F",
+      fontWeight:"bold",
+      fontSize:16,
     }
 })
