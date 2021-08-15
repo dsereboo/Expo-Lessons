@@ -4,6 +4,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import MintAction from "./MintAction";
 
 export default function MintsHomepage (){
     return (
@@ -25,8 +26,11 @@ export default function MintsHomepage (){
           <Feather name="search" size={20} color="#0a2351" />
           <TextInput style={styles.searchBox} placeholder="Search" />
         </View>
-        <View>
-          <Text>Action cards</Text>
+        <View style={styles.actionsContainer}>
+          <MintAction/>
+          <MintAction/>
+          <MintAction/>
+          <MintAction/>
         </View>
         <View>
           <Text style={styles.categoryHeader}>Choose a category</Text>
@@ -66,18 +70,24 @@ const styles=StyleSheet.create({
       justifyContent:"space-between"
     },
     greetingContainer:{
-        flex:2,
+        flex:1,
+        justifyContent:"center"
     },
     searchContainer:{
         // flex:0.5,
         width:"100%",
-        height:70,
+        height:60,
         flexDirection:"row",
         backgroundColor:"#F0F8FF",
         alignItems:"center",
         borderRadius:15,
         justifyContent:"flex-start",
         paddingLeft:15,
+    },
+    actionsContainer:{
+      flex:4,
+      flexDirection:"row",
+      flexWrap:"wrap"
     },
     categoryContainer:{
         flexDirection:"row",
@@ -114,7 +124,7 @@ const styles=StyleSheet.create({
     },
     categoryHeader:{
         fontSize:26,
-        fontWeight:"bold",
+        // fontWeight:"bold",
     },
     branch:{
         flexDirection:"row",
