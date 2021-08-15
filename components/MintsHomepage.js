@@ -22,8 +22,8 @@ export default function MintsHomepage (){
           <Text style={styles.name}>Creative Mints</Text>
         </View>
         <View style={styles.searchContainer}>
-          <Feather name="search" size={20} color="black" />
-          <TextInput style placeholder="Search" />
+          <Feather name="search" size={20} color="#0a2351" />
+          <TextInput style={styles.searchBox} placeholder="Search" />
         </View>
         <View>
           <Text>Action cards</Text>
@@ -46,10 +46,8 @@ export default function MintsHomepage (){
             </View>
             <View>
                 <Text>Make a payment</Text>
-            </View>
-            
+            </View>  
           </View>
-          
         </View>
       </View>
     );
@@ -71,12 +69,15 @@ const styles=StyleSheet.create({
         flex:2,
     },
     searchContainer:{
-        flex:0.5,
+        // flex:0.5,
+        width:"100%",
+        height:70,
         flexDirection:"row",
         backgroundColor:"#F0F8FF",
         alignItems:"center",
-        borderRadius:20,
-        justifyContent:"flex-start"
+        borderRadius:15,
+        justifyContent:"flex-start",
+        paddingLeft:15,
     },
     categoryContainer:{
         flexDirection:"row",
@@ -133,5 +134,9 @@ const styles=StyleSheet.create({
     },
     name:{
         fontSize:32,
+    },
+    searchBox:{
+      marginLeft:10,
+      fontSize:16
     }
 })
