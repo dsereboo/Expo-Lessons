@@ -1,13 +1,13 @@
 import React from "react"
 import { StyleSheet, View, Text } from "react-native"
-import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
-export default function MintAction(){
+export default function PiggyAction(){
     return (
       <View style={styles.container}>
         <View style={styles.wrapper}>
           <View style={styles.iconContainer}>
-            <Ionicons name="ios-card" size={24} color="#3457D5" />
+            <FontAwesome5 name="piggy-bank" size={24} color="#ff4d4d" />
           </View>
           <Text style={[styles.whiteText]}>Transactions</Text>
           <Text style={[styles.whiteText]}>7 items</Text>
@@ -20,7 +20,7 @@ const styles= StyleSheet.create({
     container:{
         width:150,
         height:150,
-        backgroundColor:"#3457D5",
+        backgroundColor:"#ff4d4d",
         borderRadius:10,
         justifyContent:"center",
         alignItems:"flex-start",

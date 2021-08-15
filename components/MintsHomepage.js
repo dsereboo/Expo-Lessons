@@ -5,6 +5,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import MintAction from "./MintAction";
+import PiggyAction from "./PiggyAction";
 
 export default function MintsHomepage (){
     return (
@@ -28,8 +29,8 @@ export default function MintsHomepage (){
         </View>
         <View style={styles.actionsContainer}>
           <MintAction/>
-          <MintAction/>
-          <MintAction/>
+          <PiggyAction/>
+          <PiggyAction/>
           <MintAction/>
         </View>
         <View>
@@ -87,7 +88,10 @@ const styles=StyleSheet.create({
     actionsContainer:{
       flex:4,
       flexDirection:"row",
-      flexWrap:"wrap"
+      flexWrap:"wrap",
+      justifyContent:"space-between",
+      alignItems:"center",
+      marginTop:20,
     },
     categoryContainer:{
         flexDirection:"row",
